@@ -1,0 +1,964 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Determinan &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'determinan matrix';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/foto1.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/foto1.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    selamat datang di jupyter-book saya
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="sistemlinear.html">Penyelesaian Sistem Linier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aljabarmatrix.html">Aljabar Matrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matrix-invers.html">Matriks Invers</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdeterminan matrix.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/determinan matrix.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Determinan</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Determinan</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sifat-sifat-determinan">Sifat-sifat Determinan</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-segitiga-atas-bawah">Matriks segitiga atas, bawah</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#determinan-dengan-ekpansi-kofaktor">Determinan dengan ekpansi kofaktor</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kelebihan-metode-ekspansi-kofaktor">Kelebihan Metode Ekspansi Kofaktor :</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#determinan-matriks-4x4-dengan-ekpansi-kofaktor">Determinan Matriks 4x4 dengan Ekpansi Kofaktor</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="determinan">
+<h1>Determinan<a class="headerlink" href="#determinan" title="Link to this heading">#</a></h1>
+<p>determinan (bahasa Inggris: determinant) adalah nilai skalar yang dihasilkan fungsi dari entri-entri suatu matriks persegi. Determinan dari matriks A umumnya dinyatakan dengan notasi det(A), det A, atau |A|. Determinan dapat dianggap sebagai faktor penskalaan transformasi yang digambarkan oleh matriks. Nilai determinan mencirikan beberapa sifat dari matriks tersebut, dan peta linear yang diwakili oleh matriks tersebut. Contohnya, determinan bernilai tidak nol jika dan hanya jika matriks tersebut tidak singular dan peta linear yang diwakilinya merupakan suatu isomorfisme.</p>
+<p>Determinan dari matriks 2 × 2 adalah</p>
+<p><img alt="gambar.png" src="data:image/png;base64,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" /></p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="sifat-sifat-determinan">
+<h1>Sifat-sifat Determinan<a class="headerlink" href="#sifat-sifat-determinan" title="Link to this heading">#</a></h1>
+<ol class="arabic simple">
+<li><p>matriks identitas.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]])</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">],[</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">C</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">5</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">D</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">9</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">7</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">8</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;determinan dari matriks C1 : </span><span class="si">{</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">C</span><span class="p">)))</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>determinan dari matriks C1 : 5
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Determinan dari hasil perkalian matriks A dan B sama dengan perkalian determinan matriks A dengan determinan matriks B.</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[det(AB) = det(A) * det(B)\]</div>
+<div class="math notranslate nohighlight">
+\[jika A = A^1 maka det(I) = det(A) * det(A^1)\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A_inv</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="n">B_inv</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+<span class="n">detA</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="n">detB</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+<span class="n">det_A_inv</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="n">det_B_inv</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39; det(A) * det(B) = </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">detA</span><span class="p">,</span><span class="n">det_A_inv</span><span class="p">))</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> det(A) * det(B) = 36
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>menukar kolom atau baris pada determinan dan akan mengakibatkan perubahan tanda pada nila determinan</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">RowSwap</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">l</span><span class="p">):</span>
+<span class="c1"># =============================================================================</span>
+<span class="c1">#     A is a NumPy array.  RowSwap will return duplicate array with rows</span>
+<span class="c1">#     k and l swapped.</span>
+<span class="c1"># =============================================================================</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># m is number of rows in A</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># n is number of columns in A</span>
+
+    <span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float64&#39;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">temp</span> <span class="o">=</span> <span class="n">B</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+        <span class="n">B</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">B</span><span class="p">[</span><span class="n">l</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+        <span class="n">B</span><span class="p">[</span><span class="n">l</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp</span>
+
+    <span class="k">return</span> <span class="n">B</span>
+
+<span class="k">def</span> <span class="nf">RowScale</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">scale</span><span class="p">):</span>
+<span class="c1"># =============================================================================</span>
+<span class="c1">#     A is a NumPy array.  RowScale will return duplicate array with the</span>
+<span class="c1">#     entries of row k multiplied by scale.</span>
+<span class="c1"># =============================================================================</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># m is number of rows in A</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># n is number of columns in A</span>
+
+    <span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float64&#39;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">B</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">*=</span> <span class="n">scale</span>
+
+    <span class="k">return</span> <span class="n">B</span>
+
+<span class="k">def</span> <span class="nf">RowAdd</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">scale</span><span class="p">):</span>
+<span class="c1"># =============================================================================</span>
+<span class="c1">#     A is a numpy array.  RowAdd will return duplicate array with row</span>
+<span class="c1">#     l modifed.  The new values will be the old values of row l added to</span>
+<span class="c1">#     the values of row k, multiplied by scale.</span>
+<span class="c1"># =============================================================================</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># m is number of rows in A</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># n is number of columns in A</span>
+
+    <span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float64&#39;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">B</span><span class="p">[</span><span class="n">l</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">+=</span> <span class="n">B</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">scale</span>
+
+    <span class="k">return</span> <span class="n">B</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="n">AA</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">AA</span><span class="p">))</span>
+<span class="n">A1</span> <span class="o">=</span> <span class="n">RowSwap</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">0</span> <span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A1</span><span class="p">)</span>
+<span class="n">detA1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">A1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">detA1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1 4 3]
+ [2 2 2]
+ [4 2 1]]
+10
+[[2. 2. 2.]
+ [1. 4. 3.]
+ [4. 2. 1.]]
+-10
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Apabila nilai-nilai dalam suatu baris atau kolom pada matriks merupakan kelipatan dari nilai-nilai dalam baris atau kolom lainnya, maka determinannya akan menjadi nol.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">A</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1 4 2]
+ [2 8 4]
+ [3 2 1]]
+0
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>jika k adalah skalar maka <span class="math notranslate nohighlight">\(det(KA) = K^2 * det(A)\)</span></p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">K</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">K_A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">K</span><span class="p">,</span><span class="n">A</span><span class="p">)</span>
+<span class="n">detA</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="n">detK_A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">K_A</span><span class="p">)</span>
+<span class="n">detK_AM</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mi">3</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">detA</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">detK_A</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">detK_AM</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>40.0
+40
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>apabila melakukan operasi baris elementer ke matriksnya maka tidak akan mengubah determinan dan inversenya</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="n">AA</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">AA</span><span class="p">))</span>
+<span class="n">A1</span> <span class="o">=</span> <span class="n">RowSwap</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">0</span> <span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A1</span><span class="p">)</span>
+<span class="n">detA1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">A1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">detA1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1 4 3]
+ [2 2 2]
+ [4 2 1]]
+10
+[[2. 2. 2.]
+ [1. 4. 3.]
+ [4. 2. 1.]]
+-10
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="7">
+<li><p>Determinan dari matriks A setelah dilakukan transpose sama dengan determinan matriks A sebelumnya.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">AT</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
+<span class="n">detAT</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">AT</span><span class="p">)</span>
+<span class="n">detA</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">detAT</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">detA</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
+10
+</pre></div>
+</div>
+</div>
+</div>
+<section id="matriks-segitiga-atas-bawah">
+<h2>Matriks segitiga atas, bawah<a class="headerlink" href="#matriks-segitiga-atas-bawah" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;segitiga atas </span><span class="se">\n</span><span class="si">{</span><span class="n">A</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;segitiga bawah </span><span class="se">\n</span><span class="si">{</span><span class="n">B</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">detA</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="n">detB</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+<span class="n">detAM</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">A</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">detBM</span> <span class="o">=</span> <span class="n">B</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">B</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">B</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">detA</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">detAM</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">detB</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">detBM</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>segitiga atas 
+[[1 4 2]
+ [0 4 1]
+ [0 0 1]]
+segitiga bawah 
+[[1 0 0]
+ [1 4 0]
+ [1 4 2]]
+4.0
+4
+8
+8
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="determinan-dengan-ekpansi-kofaktor">
+<h1>Determinan dengan ekpansi kofaktor<a class="headerlink" href="#determinan-dengan-ekpansi-kofaktor" title="Link to this heading">#</a></h1>
+<p><strong>Determinan ekpansi kofaktor[2]</strong> adalah Metode dalam menghitung determinan matriks adalah suatu pendekatan yang fokus pada kemampuan perhitungan manual dan teoritis dengan menggunakan kofaktor.</p>
+<section id="kelebihan-metode-ekspansi-kofaktor">
+<h2>Kelebihan Metode Ekspansi Kofaktor :<a class="headerlink" href="#kelebihan-metode-ekspansi-kofaktor" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Metode ini bisa digunakan untuk matriks yang memiliki ukuran persegi minimal 2x2.</p></li>
+<li><p>Cocok bagi yang menyukai perhitungan manual dan pendekatan teoritis.</p></li>
+<li><p>Penerapan konsep kofaktor juga berguna dalam menemukan invers dari sebuah matriks.</p></li>
+</ol>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="determinan-matriks-4x4-dengan-ekpansi-kofaktor">
+<h1>Determinan Matriks 4x4 dengan Ekpansi Kofaktor<a class="headerlink" href="#determinan-matriks-4x4-dengan-ekpansi-kofaktor" title="Link to this heading">#</a></h1>
+<p><strong>1. langkah pertama buat matriksnya terlebih dahulu dengan ordo 4x4</strong></p>
+<p><span class="math notranslate nohighlight">\(\begin{matrix}
+A = \begin{bmatrix}
+    1 &amp; 2 &amp; 3 &amp; 4\\
+    5 &amp; 6 &amp; 7 &amp; 8\\
+    9 &amp; 10 &amp; 11 &amp; 12\\
+    13 &amp; 14 &amp; 15 &amp; 16
+  \end{bmatrix}
+\end{matrix}
+\)</span></p>
+<p><strong>2. selanjutnya tulis rumus determinan disini, mengambil baris ke 2</strong></p>
+<p><span class="math notranslate nohighlight">\( det(A) = a_{21} c_{21} + a_{22} c_{22}  + a_{23} c_{23} + a_{24} c_{24} \)</span></p>
+<p><strong>3. selanjutnya tentukan kofaktor nya disini dari matriks A</strong></p>
+<p><span class="math notranslate nohighlight">\(c_{21} = (-1)^{2+1} det(M_{21})\)</span><br />
+<span class="math notranslate nohighlight">\(c_{22} = (-1)^{2+2} det(M_{22})\)</span><br />
+<span class="math notranslate nohighlight">\(c_{23} = (-1)^{2+3} det(M_{23})\)</span><br />
+<span class="math notranslate nohighlight">\(c_{24} = (-1)^{2+4} det(M_{24})\)</span></p>
+<p><strong>5. <strong>pertama : <span class="math notranslate nohighlight">\(M_{21}\)</span></strong></strong></p>
+<p><span class="math notranslate nohighlight">\(\begin{matrix}
+  det(M21) = \begin{bmatrix}
+    2 &amp; 3 &amp; 4 \\
+    10 &amp; 11 &amp; 12 \\
+    14 &amp; 15 &amp; 16
+  \end{bmatrix}
+\end{matrix}
+\)</span></p>
+<p>selanjutnya tulis rumus determinan, dan mengambil baris ke-2<br />
+<span class="math notranslate nohighlight">\(det(M21) = a_{21}c_{21} + a_{22}c_{22} + a_{23}c_{23}\)</span></p>
+<p>selanjutnya tentukan kofaktor dari matriks yang <span class="math notranslate nohighlight">\(M_{21}, M_{22}, M_{23}\)</span></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(c_{21} = (-1)^{2 + 1} det(KM21)\)</span></p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(
+\begin{matrix}
+  det(KM21) = \begin{bmatrix}
+    3 &amp; 4 \\
+    15 &amp; 16
+  \end{bmatrix}
+\end{matrix}
+\)</span><br />
+<span class="math notranslate nohighlight">\(det(KM21) = 3.16 - 4.15 = 48 - 60 = -12\)</span></p>
+<p>hasil
+<span class="math notranslate nohighlight">\(c_{21} = -1*(-12)=12\)</span></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(c_{22} = (-1)^{2+2}det(KM22)\)</span></p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(
+\begin{matrix}
+  det(KM22) = \begin{bmatrix}
+    2 &amp; 4 \\
+    14 &amp; 16
+  \end{bmatrix}
+\end{matrix}
+\)</span><br />
+<span class="math notranslate nohighlight">\(det(KM22) = 2.16 - 4.14 = 32 - 56 = -24\)</span></p>
+<p>hasil
+<span class="math notranslate nohighlight">\(c_{22} = -1*-24 = -24\)</span></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(c_{23} = (-1)^{2+3}det(KM23)\)</span></p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(
+\begin{matrix}
+  det(KM23) = \begin{bmatrix}
+    2 &amp; 3 \\
+    14 &amp; 15
+  \end{bmatrix}
+\end{matrix}
+\)</span><br />
+<span class="math notranslate nohighlight">\(det(KM23) = 2.15 - 3.14 = 30 - 42 = -12\)</span></p>
+<p>hasil
+<span class="math notranslate nohighlight">\(c_{23} = -1*-12 = -12\)</span></p>
+<p><strong>hasil akhir dari <span class="math notranslate nohighlight">\(M_{21}\)</span></strong><br />
+<span class="math notranslate nohighlight">\(det(M21) = a_{21}c_{21} + a_{22}c_{22} + a_{23}c_{23}\)</span><br />
+<span class="math notranslate nohighlight">\(det(M21) = 10 . 12 + 11 . (-24) + 12 . 12\)</span><br />
+<span class="math notranslate nohighlight">\(det(M21) = 120 - 264 + 144 = 0\)</span></p>
+<p>dibuktikan dengan menggunakan numpy python</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">M21</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">],</span> <span class="p">[</span><span class="mi">14</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">16</span><span class="p">]])</span>
+<span class="n">detM21</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">M21</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">detM21</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>6. <strong>kedua : <span class="math notranslate nohighlight">\(M_{22}\)</span></strong></strong></p>
+<p><span class="math notranslate nohighlight">\(\begin{matrix}
+  det(M22) = \begin{bmatrix}
+    1 &amp; 3 &amp; 4 \\
+    5 &amp; 6 &amp; 8 \\
+    13 &amp; 14 &amp; 15
+  \end{bmatrix}
+\end{matrix}
+\)</span></p>
+<p>selanjutnya tulis rumus determinan, dan mengambil baris ke-2<br />
+<span class="math notranslate nohighlight">\(det(M21) = a_{21}c_{21} + a_{22}c_{22} + a_{23}c_{23}\)</span></p>
+<p>selanjutnya tentukan kofaktor dari matriks yang <span class="math notranslate nohighlight">\(M_{21}, M_{22}, M_{23}\)</span></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(c_{21} = (-1)^{2 + 1} det(KM21)\)</span></p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(
+\begin{matrix}
+  det(KM21) = \begin{bmatrix}
+    3 &amp; 4 \\
+    14 &amp; 15
+  \end{bmatrix}
+\end{matrix}
+\)</span><br />
+<span class="math notranslate nohighlight">\(det(KM21) = 3.15 - 4.14 = 46 - 56 = -11\)</span></p>
+<p>hasil
+<span class="math notranslate nohighlight">\(c_{21} = -1*-11\)</span></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(c_{22} = (-1)^{2+2}det(KM22)\)</span></p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(
+\begin{matrix}
+  det(KM22) = \begin{bmatrix}
+    1 &amp; 4 \\
+    13 &amp; 15
+  \end{bmatrix}
+\end{matrix}
+\)</span><br />
+<span class="math notranslate nohighlight">\(det(KM22) = 1.15 - 4.13 = 15 - 52 = -37\)</span></p>
+<p>hasil
+<span class="math notranslate nohighlight">\(c_{22} = -1*-37\)</span></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(c_{23} = (-1)^{2+3}det(KM23)\)</span></p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(
+\begin{matrix}
+  det(KM23) = \begin{bmatrix}
+    1 &amp; 3 \\
+    13 &amp; 14
+  \end{bmatrix}
+\end{matrix}
+\)</span><br />
+<span class="math notranslate nohighlight">\(det(KM23) = 1.14 - 3.13 = 14 - 39 = -25\)</span></p>
+<p>hasil
+<span class="math notranslate nohighlight">\(c_{23} = -1*-25\)</span></p>
+<p><strong>hasil akhir dari <span class="math notranslate nohighlight">\(M_{22}\)</span></strong><br />
+<span class="math notranslate nohighlight">\(det(M22) = a_{21}c_{21} + a_{22}c_{22} + a_{23}c_{23}\)</span><br />
+<span class="math notranslate nohighlight">\(det(M22) = 3.11 + 6.37 + 8.25\)</span><br />
+<span class="math notranslate nohighlight">\(det(M22) = 33 + 222 + 200 = 455\)</span></p>
+<p>dibuktikan dengan menggunakan numpy python</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">M22</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">],[</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">15</span><span class="p">]])</span>
+<span class="n">detM22</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">M22</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">detM22</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>33
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Determinan</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sifat-sifat-determinan">Sifat-sifat Determinan</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-segitiga-atas-bawah">Matriks segitiga atas, bawah</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#determinan-dengan-ekpansi-kofaktor">Determinan dengan ekpansi kofaktor</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kelebihan-metode-ekspansi-kofaktor">Kelebihan Metode Ekspansi Kofaktor :</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#determinan-matriks-4x4-dengan-ekpansi-kofaktor">Determinan Matriks 4x4 dengan Ekpansi Kofaktor</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
